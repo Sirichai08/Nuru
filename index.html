@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GRURU MUSEUM — พิพิธภัณฑ์ความรู้ดิจิทัลแห่งชาติ</title>
+
+  <!-- Google Fonts: Chakra Petch, IBM Plex Sans Thai, IBM Plex Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Specimen Grid Background Pattern -->
+  <div class="specimen-grid-bg"></div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <div class="brand-wrapper">
+        <img src="logo.jpg" alt="GRURU MUSEUM Logo" class="brand-logo-img">
+        <div>
+          <div class="brand-title">GRURU MUSEUM</div>
+          <span class="brand-badge">DIGITAL HERITAGE PLATFORM</span>
+        </div>
+      </div>
+
+      <nav class="nav-links">
+        <a href="#vision" class="nav-item">HALL 01 วิสัยทัศน์</a>
+        <a href="#booming" class="nav-item">HALL 02 DATA BOOMING</a>
+        <a href="#architecture" class="nav-item">HALL 03 KNOWLEDGE GRAPH</a>
+        <a href="#missions" class="nav-item">HALL 04 ภารกิจ 5 ขั้น</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#booming" class="btn-primary" style="padding: 8px 18px; font-size: 0.85rem;">เริ่มขุดค้นข้อมูล ↗</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="vision">
+    <div class="container hero-grid">
+      <div>
+        <div class="specimen-label">GRM-2026-HERO-001 // NATIONAL DIGITAL STRATEGY</div>
+        <div class="hero-tag">⚡ Future Archaeology Lab</div>
+        <h1 class="hero-title">
+          ปลุกความรู้ในอดีต<br>
+          สู่นวัตกรรมเรื่องเล่า<br>
+          <span class="gradient-text">ที่ใช้ได้จริงทุกวัน</span>
+        </h1>
+        <p class="hero-description">
+          GRURU MUSEUM คือแพลตฟอร์มพิพิธภัณฑ์ความรู้ดิจิทัลแนวคิด <strong>"Future Archaeology"</strong> ที่เปลี่ยนข้อมูลมหาศาลจากอดีตให้กลายเป็นกราฟความรู้เชื่อมโยง (Knowledge Graph) สไตล์สาย Tech เข้าใจง่ายใน 3 วินาที เพื่อยกระดับการเรียนรู้และเศรษฐกิจดิจิทัลของประชาชน
+        </p>
+
+        <div class="hero-actions">
+          <button id="btnTriggerBooming" class="btn-primary">⚡ สัมผัส Data Booming</button>
+          <a href="#architecture" class="btn-secondary">สำรวจ Knowledge Graph ↗</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number">3 วินาที</span>
+            <span class="stat-desc">เข้าใจสาระสำคัญอย่างรวดเร็ว</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">100%</span>
+            <span class="stat-desc">สอบทานแหล่งที่มาได้ทุกโหนด</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">WCAG AA</span>
+            <span class="stat-desc">มาตรฐานการเข้าถึงสำหรับทุกคน</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual-card">
+        <img src="data_booming.jpg" alt="Data Booming Radial Burst" class="hero-img">
+        <div class="card-hud-footer">
+          <span>RADIAL KNOWLEDGE EXPLOSION</span>
+          <span>SYSTEM: READY</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Data Booming Section -->
+  <section class="section section-alt" id="booming">
+    <div class="container">
+      <div class="section-header">
+        <div class="specimen-label">HALL 02 // INTERACTIVE DATA ENGINE</div>
+        <h2 class="section-title">นวัตกรรม "Data Booming"</h2>
+        <p class="section-subtitle">
+          ทดลองคลิกโหนดหรือเลือกหมวดหมู่ เพื่อดูการ <strong>"ระเบิดความรู้แบบแผ่รัศมี"</strong> จากแกนกลางสู่ความสัมพันธ์ที่เชื่อมโยงถึงกัน
+        </p>
+      </div>
+
+      <div class="booming-container">
+        <!-- Interactive Canvas -->
+        <div class="booming-canvas-wrap">
+          <canvas id="boomingCanvas"></canvas>
+          <div class="booming-controls">
+            <button class="booming-category-btn active" data-cat="all">ทั้งหมด</button>
+            <button class="booming-category-btn" data-cat="science">วิทยาศาสตร์</button>
+            <button class="booming-category-btn" data-cat="history">ประวัติศาสตร์</button>
+            <button class="booming-category-btn" data-cat="tech">เทคโนโลยี</button>
+            <button class="booming-category-btn" data-cat="culture">ภูมิปัญญา</button>
+            <button class="booming-category-btn" data-cat="nature">ธรรมชาติ</button>
+            <button class="booming-category-btn" data-cat="art">ศิลปะ</button>
+          </div>
+        </div>
+
+        <!-- Specimen Detail Panel -->
+        <div class="booming-detail-panel">
+          <div>
+            <div class="specimen-label" id="panelCode">GRM-2026-CORE-000</div>
+            <h3 class="detail-node-title" id="panelTitle">GRURU MUSEUM</h3>
+            <div class="detail-badge-group">
+              <span class="badge badge-cyan" id="panelEra">2026 - อนาคต</span>
+              <span class="badge badge-ember" id="panelCategory">CORE HUB</span>
+            </div>
+            <p class="detail-summary" id="panelSummary">
+              ศูนย์กลางพิพิธภัณฑ์ความรู้ดิจิทัลสไตล์ Future Archaeology ที่ขุดค้น ถอดรหัส และเชื่อมโยงความรู้สู่ชีวิตประจำวัน
+            </p>
+
+            <!-- Everyday Takeaway -->
+            <div class="takeaway-box">
+              <div class="takeaway-header">
+                <span>💡 Everyday Takeaway (นำไปใช้จริงวันนี้):</span>
+              </div>
+              <p class="takeaway-text" id="panelTakeaway">
+                เข้าใจแก่นแท้ของความรู้ข้ามยุคสมัย แล้วดึงไปปรับใช้ในการตัดสินใจและสร้างสรรค์นวัตกรรมใหม่ได้ทันที
+              </p>
+            </div>
+          </div>
+
+          <div style="font-family: var(--font-mono); font-size: 0.75rem; color: #64748B;">
+            * คลิกบนโหนดหรือกิ่งสาขาในหน้าจอเพื่อสำรวจความสัมพันธ์เชิงลึก
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5 Missions Pipeline Section -->
+  <section class="section" id="missions">
+    <div class="container">
+      <div class="section-header">
+        <div class="specimen-label">HALL 04 // 5-STAGE PIPELINE</div>
+        <h2 class="section-title">5 ภารกิจขับเคลื่อนความรู้สู่ประชาชน</h2>
+        <p class="section-subtitle">
+          ขั้นตอนมาตรฐานในการแปลงคลังจดหมายเหตุและองค์ความรู้ของชาติสู่เรื่องเล่าที่คนรุ่นใหม่จับต้องได้
+        </p>
+      </div>
+
+      <div class="missions-grid">
+        <div class="mission-card">
+          <div class="mission-step">STAGE 01</div>
+          <h4 class="mission-title">1. EXCAVATE</h4>
+          <p class="mission-desc">ขุดค้นและคัดสรรความรู้จากประวัติศาสตร์ วิทยาศาสตร์ และภูมิปัญญา ระบุแหล่งอ้างอิงชัดเจน</p>
+        </div>
+
+        <div class="mission-card">
+          <div class="mission-step">STAGE 02</div>
+          <h4 class="mission-title">2. DECODE</h4>
+          <p class="mission-desc">ถอดรหัสเนื้อหาแปลงสภาพเป็น Entity Nodes และความสัมพันธ์ในโครงข่าย Semantic Graph</p>
+        </div>
+
+        <div class="mission-card">
+          <div class="mission-step">STAGE 03</div>
+          <h4 class="mission-title">3. RETELL</h4>
+          <p class="mission-desc">เล่าใหม่ผ่าน Visual Storytelling นิทรรศการมัลติมีเดียที่เข้าใจได้ใน 3–5 นาที</p>
+        </div>
+
+        <div class="mission-card">
+          <div class="mission-step">STAGE 04</div>
+          <h4 class="mission-title">4. CONNECT</h4>
+          <p class="mission-desc">เปิดมุมมองเชื่อมโยงความรู้ข้ามยุคสมัยด้วย Data Booming & Interactive Graph</p>
+        </div>
+
+        <div class="mission-card">
+          <div class="mission-step">STAGE 05</div>
+          <h4 class="mission-title">5. APPLY</h4>
+          <p class="mission-desc">ปิดท้ายด้วยการ์ด Everyday Takeaway สรุปข้อคิดและวิธีนำไปปรับใช้ในชีวิตประจำวัน</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Knowledge Graph Architecture Showcase -->
+  <section class="section section-alt" id="architecture">
+    <div class="container">
+      <div class="section-header">
+        <div class="specimen-label">HALL 03 // ARCHITECTURE GALLERY</div>
+        <h2 class="section-title">โครงข่ายและชุดข้อมูลความรู้แบบบูรณาการ</h2>
+        <p class="section-subtitle">
+          การรวมคลังหนังสือ ตำรา ฐานข้อมูลวิจัย และภูมิปัญญาชุมชน สู่โครงสร้างความรู้หนึ่งเดียว
+        </p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-card">
+          <img src="ChatGPT Image Oct 8, 2026, 09_53_32 PM-1.png" alt="Integrated Knowledge Graph" class="gallery-img">
+          <div class="gallery-body">
+            <h4 class="gallery-title">Multi-Source Knowledge Graph</h4>
+            <p class="gallery-desc">รวบรวมจาก Books, Textbooks, Databases และ Community Knowledge มาสังเคราะห์ด้วย AI สู่ความเข้าใจที่เชื่อมโยง</p>
+          </div>
+        </div>
+
+        <div class="gallery-card">
+          <img src="ChatGPT Image Oct 8, 2026, 09_53_35 PM-4.png" alt="Clean Minimalist Architecture" class="gallery-img">
+          <div class="gallery-body">
+            <h4 class="gallery-title">Entities & Relations Matrix</h4>
+            <p class="gallery-desc">แผนภาพแสดงความสัมพันธ์ของเอนทิตีและการสืบค้นความรู้เชิงลึกในสไตล์สะอาดตาแบบ Modern Art</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>GRURU MUSEUM</h4>
+          <p>
+            พิพิธภัณฑ์ความรู้ดิจิทัลสไตล์ Future Archaeology ผสานอัตลักษณ์ไทยร่วมสมัย ภายใต้นโยบายเศรษฐกิจดิจิทัลเพื่อประชาชน
+          </p>
+          <div style="margin-top: 16px; font-family: var(--font-mono); font-size: 0.8rem; color: var(--gr-lime);">
+            "อดีตคือข้อมูล อนาคตคือเรื่องเล่า"
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>EXHIBITION HALLS</h5>
+          <ul>
+            <li><a href="#vision">HALL 01 วิสัยทัศน์</a></li>
+            <li><a href="#booming">HALL 02 Data Booming</a></li>
+            <li><a href="#architecture">HALL 03 Knowledge Graph</a></li>
+            <li><a href="#missions">HALL 04 ภารกิจ 5 ขั้น</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>SYSTEM SPEC</h5>
+          <ul>
+            <li><a href="#">WCAG AA Accessible</a></li>
+            <li><a href="#">8-Point Grid Scale</a></li>
+            <li><a href="#">TH Sarabun & Chakra Fonts</a></li>
+            <li><a href="#">Open Knowledge API</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 GRURU MUSEUM. ALL RIGHTS RESERVED.</span>
+        <span>POWERED BY GOOGLE ANTIGRAVITY ENGINE</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
